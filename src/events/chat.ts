@@ -19,7 +19,7 @@ export default class ChatEvent extends Event {
         if (!command) return
 
         try {
-            await command.execute(args)
+            await command.execute(username, args)
         } catch (error) {
             console.error(error)
             this.bot.chat('There was an error trying to execute that command!')

@@ -8,5 +8,5 @@ export abstract class Command {
         this.bot = bot
     }
 
-    abstract execute(args: string[]): Promise<void>
+    abstract execute(username: string, args: string[]): Promise<void>
 }
