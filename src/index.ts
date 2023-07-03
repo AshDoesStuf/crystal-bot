@@ -6,7 +6,7 @@ import { config } from 'dotenv'
 
 // Mineflayer plugins
 import { plugin as autoeat } from 'mineflayer-auto-eat'
-
+import { pathfinder } from 'mineflayer-pathfinder'
 
 // Just there incase you run this without docker
 // Docker will set the env variables
@@ -24,7 +24,10 @@ const bot = createBot({
 }) as CrystalBot
 
 bot.cb.commands = new Map()
+
+// Load all the plugins
 bot.loadPlugin(autoeat)
+bot.loadPlugin(pathfinder)
 
 async function load() {
     await loadEvents(bot)
