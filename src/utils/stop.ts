@@ -5,4 +5,5 @@ export function stop(bot: CrystalBot) {
     bot.clearControlStates()
     bot.stopDigging()
     bot.deactivateItem()
+    bot.pathfinder.stop()
 }
