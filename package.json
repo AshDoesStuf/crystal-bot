@@ -23,6 +23,7 @@
     "dependencies": {
         "dotenv": "^16.1.4",
         "mineflayer": "^4.10.0",
-        "mineflayer-auto-eat": "^3.3.6"
+        "mineflayer-auto-eat": "^3.3.6",
+        "mineflayer-pathfinder": "^2.4.4"
     }
 }
