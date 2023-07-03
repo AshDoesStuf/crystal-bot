@@ -1,6 +1,11 @@
 import { Command } from './Command.js'
 import { Bot } from 'mineflayer'
 
-export interface CrystalBot extends Bot {
+interface CrystalBotConfig {
     commands: Map<string, Command>
+}
+
+export interface CrystalBot extends Bot {
+    // CB stands for CrystalBot
+    cb: CrystalBotConfig
 }
