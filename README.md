@@ -29,4 +29,5 @@ Crystal Bot uses a `.env` file to configure the bot. An example is provided in `
 | PORT     | The server port to connect to.          | ✘         |
 | VERSION  | The minecraft version to use.           | ✘         |
 | AUTH     | The auth method to use when logging in. | ✘         |
+| OWNER    | The username of the owner of the bot.   | ✘         |
 
