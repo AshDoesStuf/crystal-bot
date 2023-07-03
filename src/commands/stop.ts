@@ -1,12 +1,15 @@
 import { Command } from '../types/Command.js'
 import { stop } from '../utils/stop.js'
 
-export default class Ping extends Command {
+// Doesnt actually stop the bot and just stops everything the bot is currently doing
+
+export default class Stop extends Command {
     name = 'stop'
+    aliases = ['reset']
     ownerOnly = true
 
     async execute(username: string, args: string[]) {
         stop(this.bot)
-        this.bot.chat('Stopping...')
+        this.bot.chat('State has been reset.')
     }
 }
