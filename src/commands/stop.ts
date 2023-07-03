@@ -8,7 +8,7 @@ export default class Stop extends Command {
     aliases = ['reset']
     ownerOnly = true
 
-    async execute(username: string, args: string[]) {
+    async execute() {
         stop(this.bot)
         this.bot.chat('State has been reset.')
     }
