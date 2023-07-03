@@ -17,10 +17,10 @@ export default class ChatEvent extends Event {
         const command = this.bot.cb.commands.get(commandName)
 
         if (!command) return
-        else if (command.ownerOnly && username !== process.env.OWNER) return
 
         try {
-            await command.execute(username, args)
+            if (!command.ownerOnly) await command.execute(username, args)
+            else if (username === process.env.OWNER) await command.execute(username, args)
         } catch (error) {
             console.error(error)
             this.bot.chat('There was an error trying to execute that command!')
