@@ -10,6 +10,6 @@ export async function loadCommands(bot: CrystalBot) {
         const CommandClass = (await import(`../commands/${file}`)).default
         const command: Command = new CommandClass(bot)
 
-        bot.commands.set(command.name, command)
+        bot.cb.commands.set(command.name, command)
     }
 }
