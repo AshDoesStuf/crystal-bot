@@ -23,9 +23,9 @@ const bot = createBot({
     profilesFolder: '../profiles'
 }) as CrystalBot
 
-bot.cb = {
-    commands: new Map()
-}
+// @ts-ignore - Will throw error if I dont do this
+bot.cb = {}
+bot.cb.commands = new Map()
 
 // Load all the plugins
 bot.loadPlugin(autoeat)
