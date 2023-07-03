@@ -1,12 +1,11 @@
 import { Command } from '../types/Command.js'
+import pathfinder from 'mineflayer-pathfinder'
 
 export default class Follow extends Command {
     name = 'follow'
 
     async execute(username: string, args: string[]) {
-        // I hate CommonJS
-        // Why is it so common *badum tss*
-        const { GoalFollow } = (await import('mineflayer-pathfinder')).goals
+        const { GoalFollow } = pathfinder.goals
 
         const name = args[0] ?? username
         const player = this.bot.players[name]

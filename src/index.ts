@@ -14,6 +14,9 @@ config({ path: '../.env' })
 
 type AuthMethods = 'microsoft' | 'mojang' | 'offline'
 
+// For temporary debug purposes
+console.log(process.env)
+
 const bot = createBot({
     username: process.env.USERNAME as string,
     host: process.env.HOST as string,
